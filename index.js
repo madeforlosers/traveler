@@ -58,6 +58,10 @@ for(i; i < file.length; i++){
             backupAns = ans;
             ans = (ans == args[0]);
             break;
+        case "y":
+            backupAns = ans;
+            ans = (ans <= args[0]);
+            break;
         case "n":
             backupAns = ans;
             ans = !ans;
