@@ -1,6 +1,6 @@
 const fs = require("fs");
-
-var file = fs.readFileSync("index.com","utf8");
+const prompt = require("prompt-sync")();
+var file = fs.readFileSync("index.trav","utf8");
 
 var backupAns = 0;
 var ans = 0;
@@ -102,6 +102,13 @@ for(i; i < file.length; i++){
             //console.log("!")
             i = whlayers[0]-1;
             break;
+        case "q":
+            backupAns = ans;
+            ans = parseFloat(prompt(">"));
+            break;
+        case "i":
+            backupAns = ans;
+            ans = parseInt(ans);
     }
     if(lets.toUpperCase() === lets && lets.match(/[A-z]/g) != null){
         console.log(ans);
